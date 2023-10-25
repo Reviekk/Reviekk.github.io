@@ -1,0 +1,440 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 3.5em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3{
+    font-size: 2em;
+    color: white;
+}
+p{
+    font-size: 1.25em;
+}
+
+ul{
+    list-style: none;
+
+}
+li{
+    font-size: 1.25;
+}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(39, 39, 253);
+    cursor: pointer;
+}
+button:hover {
+background-color: rgb(39, 39, 253);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+.color-acento{color: rgb(39, 39, 255);}
+
+header{
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    animation: adjust-header linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 100px 200px;
+    
+}
+
+@keyframes adjust-header {
+    to {
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      font-size: 17px;
+      padding: 1rem 5%;
+      color: white;
+    }
+
+    a {
+        color:white;
+    }
+  }
+
+
+
+header .logo{
+margin: 0;
+padding: 25px 30px ;
+font-weight: bold;
+color: rgb(39, 39, 255);
+font-size: 1.6em;
+}
+
+header .container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+
+}
+header a{
+    padding: 5px 12px;
+    text-decoration:none ;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(39, 39, 255);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Img/fondoinical.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+    font-size: 5em;
+}
+#hero .container{
+
+}
+
+#quienes-somos .container{
+text-align: center;
+padding: 200px, 12px;
+}
+
+#servicios{
+    text-align: center;
+    background-color: aquamarine;
+}
+
+#servicios .container{
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#servicios p {
+    display: none;
+    color: white;
+}
+#servicios h2{
+margin-top: 0px;
+font-size: 3em;
+
+}
+
+
+#servicios .cartas{
+background-position: center;
+background-size: cover;
+padding: 50px;
+margin: 20px;
+border-radius: 15px;
+box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.cartas:first-child{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Img/ERP.jpg");
+
+}
+.cartas:nth-child(2){
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Img/Nómina.jpg");
+}
+.cartas:nth-child(3){
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Img/Inmuebles.jpg");
+}
+.cartas:nth-child(4){
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Img/POS.jpg");
+}
+.cartas:nth-child(5){
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Img/Facturación.jpg");
+}
+
+
+
+.container-form{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    margin-top: 30px;
+    
+}
+
+.container-form h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.container-form p{
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.container-form a{
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+.container-form a i{
+    color: blue;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+.container-form form .campo, textarea{
+width: 450px;
+padding: 10px 5px;
+font-size: 14px;
+border: 1px solid #dbdbdb;
+margin-bottom: 20px;
+border-radius: 3px;
+outline: 0px;
+box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+margin-left: 15px;
+}
+
+.container-form form textarea{
+    max-width: 500px;
+    min-width: auto;
+    min-height: 100px;
+    max-height: 120px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container-form .btn-enviar{
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(39, 39, 253);
+    cursor: pointer;
+  
+}
+
+.container-form .btn-enviar:hover{
+    background-color: rgb(39, 39, 253);
+}
+
+
+
+
+
+footer{
+    background-color: rgb(240, 239, 239);
+
+}
+footer p{
+    margin: 0;
+    color: rgba(100,100,100);
+    padding: 12px;
+
+}
+
+footer .container{
+    height: 50px;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+@media (min-width: 720px){
+
+    header{
+        position: fixed;
+        width: 100%;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    header nav{
+        flex-direction: row;
+        padding-right: 10px;
+        padding-bottom: 0;
+    }
+
+    #quienes-somos .container{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #quienes-somos .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding: 0px 30px;
+        display: flex;
+       justify-content: center;
+        flex-direction: column;
+
+    }
+    #quienes-somos h2{
+        margin-top: 0px;
+    }
+
+    #quienes-somos .img-container{
+
+        background-image: url("Img/logo2.jpeg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+
+    }
+    #servicios .servi{
+        display:flex;
+        justify-content: center;
+    }
+
+    #servicios p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #servicios h3{
+        margin-top: 0;
+        
+    }
+
+    #servicios .cartas{
+        padding: 50px;
+   
+    }
+
+    
+    
+    .container-form{
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 50px;
+        margin-top: 90px;
+        
+    }
+    
+    .container-form h2{
+        margin-bottom: 15px;
+        font-size: 35px;
+    }
+    
+    .container-form p{
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 35px;
+    }
+    
+    .container-form a{
+        font-size: 17px;
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        margin-bottom: 15px;
+        color: black;
+        font-weight: 700;
+    }
+    
+    .container-form a i{
+        color: blue;
+        margin-right: 15px;
+    
+    }
+    
+    .container-form form .campo, textarea{
+    width: 530px;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+    }
+    
+    .container-form form textarea{
+        max-width: 530px;
+        min-width: 530px;
+        min-height: 140px;
+        max-height: 150px;
+    }
+    
+    .container-form .btn-enviar{
+        font-size: 1.25em;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 2px solid rgb(0,0,0,0.3);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        color: white;
+        background-color: rgb(39, 39, 253);
+        cursor: pointer;
+        
+    }
+    
+    .container-form .btn-enviar:hover{
+        background-color: rgb(39, 39, 253);
+    }
+    
+
+}
